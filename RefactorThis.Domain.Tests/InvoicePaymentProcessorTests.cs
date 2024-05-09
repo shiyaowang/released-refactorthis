@@ -162,7 +162,7 @@ namespace RefactorThis.Domain.Tests
 				Amount = 5
 			};
 
-			var result = paymentProcessor.ProcessPayment( payment );
+			var result = paymentProcessor.ProcessPayment(payment);
 
             ClassicAssert.AreEqual( "final partial payment received, invoice is now fully paid", result );
 		}
