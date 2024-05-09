@@ -170,14 +170,14 @@ namespace RefactorThis.Domain.Tests
 		[Test]
 		public void ProcessPayment_Should_ReturnFullyPaidMessage_When_NoPartialPaymentExistsAndAmountPaidEqualsInvoiceAmount( )
 		{
-			var repo = new InvoiceRepository( );
+			var repo = new InvoiceRepository();
 			var invoice = new Invoice()
 			{
 				Amount = 10,
 				AmountPaid = 0,
-				Payments = new List<Payment>( ) { new Payment( ) { Amount = 10 } }
+				Payments = new List<Payment>() { new Payment( ) { Amount = 10 } }
 			};
-			repo.AddInvoice( invoice );
+			repo.AddInvoice(invoice);
 
 			var paymentProcessor = new InvoiceService( repo );
 
