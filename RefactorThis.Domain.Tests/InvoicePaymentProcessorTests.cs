@@ -157,7 +157,7 @@ namespace RefactorThis.Domain.Tests
 
 			var paymentProcessor = new InvoiceService( repo );
 
-			var payment = new Payment( )
+			var payment = new Payment()
 			{
 				Amount = 5
 			};
